@@ -11,12 +11,12 @@ public interface MyReader {
 
     Logger logger = LoggerFactory.getLogger(MyReader.class);
 
-    static MyReader readFile(String filename) {
+    static MyReader readFile(String filename, char separator) {
         try {
             switch (FilenameUtils.getExtension(filename)) {
                 case "csv":
                     logger.info("Reading the csv file {}", filename);
-                    return new MyCSVReader(filename);
+                    return new MyCSVReader(filename, separator);
                 // todo add other implementation
                 default:
                     logger.error("File extension is unknown");
