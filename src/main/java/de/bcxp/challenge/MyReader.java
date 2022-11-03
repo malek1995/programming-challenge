@@ -33,4 +33,7 @@ public interface MyReader {
     List<String> readCol(String colName);
 
     String readValue(String rowName, String colName);
+
+    // Just used in the tests
+    public List<String> getLabels();
 }

@@ -89,4 +89,8 @@ public class MyCSVReader implements MyReader {
         csvReader.close();
         return fileContent;
     }
+
+    public List<String> getLabels() {
+        return labels;
+    }
 }
